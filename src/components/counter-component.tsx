@@ -18,8 +18,8 @@ const CounterComponent = (props: CounterComponentProps) => {
 	const runCount = () => {
 		if (counterEnabled) {
 			setTimeout(() => {
-				setCount(count + 1);
-			}, 1000);
+				setCount(count + 0.1);
+			}, 100);
 		}
 	};
 
@@ -40,7 +40,7 @@ const CounterComponent = (props: CounterComponentProps) => {
 	return (
 		<div className="counter-component-container" onClick={() => counterClicked()}>
 			<h2>{props.name}</h2>
-			<h2>{count}</h2>
+			<h2>{Math.floor(count)}</h2>
 		</div>
 	);
 };
