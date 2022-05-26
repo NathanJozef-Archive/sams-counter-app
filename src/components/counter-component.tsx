@@ -29,7 +29,10 @@ const CounterComponent = (props: CounterComponentProps) => {
 		});
 
 		if (counterEnabled) {
+			document.getElementById(`counter-${props.name}`)!.style.backgroundColor = 'green'
 			runCount();
+		} else {
+			document.getElementById(`counter-${props.name}`)!.style.backgroundColor = 'grey'
 		}
 
 		return () => {
@@ -38,7 +41,7 @@ const CounterComponent = (props: CounterComponentProps) => {
 	}, [counterEnabled, count]);
 
 	return (
-		<div className="counter-component-container" onClick={() => counterClicked()}>
+		<div id={`counter-${props.name}`} className="counter-component-container" onClick={() => counterClicked()}>
 			<h2>{props.name}</h2>
 			<h2>{Math.floor(count)}</h2>
 		</div>
