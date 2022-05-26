@@ -1,6 +1,6 @@
-.counter-component-container {
-    background-color: grey;
-    width: 80%;
+.counter-component-container-selected {
+    background-color: green;
+    width: 90%;
     height: 3rem;
     margin: 10px 0;
     display: flex;
@@ -8,4 +8,20 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 8px;
+}
+
+.counter-component-container {
+    background-color: grey;
+    width: 90%;
+    height: 3rem;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.name-input-label {
+    height: 50%;
 }
