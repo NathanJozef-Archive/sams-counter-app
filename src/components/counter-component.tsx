@@ -69,10 +69,10 @@ const CounterComponent = (props: CounterComponentProps) => {
 
 	return (
 		<div id={`counter-${props.id}`} className="counter-component-container" onClick={() => counterClicked()}>
-			<h2>{props.id}</h2>
+			<h2 className='no-select' unselectable='off'>{props.id}</h2>
 			<input className="name-input-label" type="text" defaultValue={props.id} onClick={(ev)=>{ev.stopPropagation()}} />
-			<h2>{convertCountToTime()}</h2>
-			<h2>{numberOfStarts}</h2>
+			<h2 className='no-select'>{convertCountToTime()}</h2>
+			<h2 className='no-select'>{numberOfStarts}</h2>
 		</div>
 	);
 };
