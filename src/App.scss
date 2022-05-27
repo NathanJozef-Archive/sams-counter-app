@@ -9,7 +9,7 @@
 }
 
 .instruction-container {
-	padding: 10px
+	padding: 10px;
 }
 
 .counter-container {
@@ -44,6 +44,8 @@
 	width: 3rem;
 	background-color: green;
 	border-radius: 1.5rem;
+	user-select: none;
+	cursor: pointer;
 }
 
 .control-text {
@@ -57,11 +59,13 @@
 	background-color: red;
 	margin-top: 2rem;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 h1,
 h2,
-h3, h4 {
+h3,
+h4 {
 	margin: 0 0;
 	color: white;
 }
